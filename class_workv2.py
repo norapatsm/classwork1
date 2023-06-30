@@ -15,7 +15,7 @@ image = cv.line(image, start_point, end_point, color, thickness)
 cv.imwrite("./filter.png", image)
 
 # Reading the input image and the filter image
-input_image = cv.imread("./21456.jpg", cv.IMREAD_GRAYSCALE)
+input_image = cv.imread("./kanti.jpg", cv.IMREAD_GRAYSCALE)
 filter_image = cv.imread("./filter.png", cv.IMREAD_GRAYSCALE)
 
 # Normalizing the filter image
