@@ -16,7 +16,7 @@ line_thickness = 2
 
 slope = (end_point[1] - start_point[1]) / (end_point[0] - start_point[0])
 
-e
+
 angle = np.arctan(slope)
 
 
