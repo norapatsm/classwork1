@@ -15,21 +15,21 @@ line_thickness = 1
 # Draw the line on the image
 cv.line(image, start_point, end_point, line_color, line_thickness)
 
-# Saving the line image
+
 cv.imwrite("line_filter.png", image)
 
-# Load an image to convolve with the line
+
 image_path = "kanti.jpg"
 original_image = cv.imread(image_path, cv.IMREAD_GRAYSCALE)
 
-# Reading the line filter image
+
 line_filter_image = cv.imread("line_filter.png", cv.IMREAD_GRAYSCALE)
 
-# Normalizing the filter image
+
 line_filter_sum = line_filter_image.sum()
 line_filter_image = line_filter_image / line_filter_sum
 
-# Applying the filter (convolution)
+
 output_image = cv.filter2D(src=original_image, ddepth=-1, kernel=line_filter_image)
 
 # Saving the output image
